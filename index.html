@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Foogle Play - A book store based on Backbonne.js</title>
+        <title>Foogle Play - A book store based on Backbone.js</title>
 
         <link href="css/style.css" rel="stylesheet" />
     </head>
@@ -28,27 +28,31 @@
             <aside>
                 <ul class="sidebar">
                     <li>
-                        <a href="#" title="All">All</a>
-                        <a href="#" title="Horror">Horror</a>
-                        <a href="#" title="Romance">Romance</a>
-                        <a href="#" title="Science Fiction">Science Fiction</a>
-                        <a href="#" title="Sports">Sports</a>
+                        <a href="#category/all" title="All">All</a>
+                        <a href="#category/horror" title="Horror">Horror</a>
+                        <a href="#category/romance" title="Romance">Romance</a>
+                        <a href="#category/scifi" title="Science Fiction"
+                            >Science Fiction</a
+                        >
+                        <a href="#category/sports" title="Sports">Sports</a>
                     </li>
                 </ul>
             </aside>
 
             <section class="content">
-                <ul class="books">
-                    <li>
-                        <a href="#" title="">
-                            <span class="overlay"></span>
-                            <img
-                                src="http://books.google.co.uk/books?id=PGRkblShhU8C&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE717ksrxlNeItMmGu3BtBXUmVoXjyTkA-xwl20p498ltW6F3mDRl9g9k6S0YyEBnBwguR74bdFzUeAHhdcLdTca1yiwoFjPZBwRhDrtFLXSyxTO5T8c&source=gbs_api"
-                                alt=""
-                            />
-                        </a>
-                    </li>
-                </ul>
+                <div class="books" data-id="books">
+                    <!-- <ul class="books-list">
+                        <li>
+                            <a href="#" title="">
+                                <span class="overlay"></span>
+                                <img
+                                    src="http://books.google.co.uk/books?id=PGRkblShhU8C&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE717ksrxlNeItMmGu3BtBXUmVoXjyTkA-xwl20p498ltW6F3mDRl9g9k6S0YyEBnBwguR74bdFzUeAHhdcLdTca1yiwoFjPZBwRhDrtFLXSyxTO5T8c&source=gbs_api"
+                                    alt=""
+                                />
+                            </a>
+                        </li>
+                    </ul> -->
+                </div>
 
                 <section class="book">
                     <header class="book-header">
@@ -91,6 +95,8 @@
 
         <script src="js/app.js"></script>
         <script src="js/router/router.js"></script>
+        <script src="js/model/model.js"></script>
+        <script src="js/view/view.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

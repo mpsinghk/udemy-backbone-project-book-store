@@ -34,8 +34,9 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+    margin: 0.5em 0;
     padding: 0;
+    text-transform: capitalize;
 }
 
 a,
@@ -110,7 +111,7 @@ aside {
 
 .content {
     flex: 1;
-    padding: 50px;
+    padding: 20px 40px;
 }
 
 /* Sidebar
@@ -145,11 +146,10 @@ aside {
 
 /* Books List
  * -------------------------------------------------- */
-.books {
+.books ul {
     padding: 0;
     margin: 0;
     list-style: none;
-    display: none;
 }
 
 .books li {
@@ -159,20 +159,20 @@ aside {
     border-radius: 2px;
     display: inline-block;
     margin: 5px;
-    width: 160px;
-    height: 230px;
+    width: 128px;
+    height: 180px;
     overflow: hidden;
     position: relative;
     text-align: left;
 }
 
-.books a {
+.books li a {
     display: block;
     width: 100%;
     height: 100%;
 }
 
-.books a .overlay {
+.books li a .overlay {
     display: none;
     position: absolute;
     top: 0;
@@ -182,9 +182,9 @@ aside {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.books a:hover .overlay,
-.books a:focus .overlay,
-.books a:active .overlay {
+.books li a:hover .overlay,
+.books li a:focus .overlay,
+.books li a:active .overlay {
     display: block;
 }
 
