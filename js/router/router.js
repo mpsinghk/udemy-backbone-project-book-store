@@ -7,14 +7,14 @@ app.routers.Router = Backbone.Router.extend({
     },
 
     home: function() {
-        console.log('Home');
+        // console.log('Home');
     },
 
     category: function(id) {
-        console.log('Category ' + id);
+        // console.log('Category ' + id);
 
         app.data.books = new app.models.Books(null, { catId: id });
-        console.log(app.data.books.url());
+        // console.log(app.data.books.url());
 
         if (app.data.currentView) {
             app.data.currentView.remove();
@@ -36,10 +36,30 @@ app.routers.Router = Backbone.Router.extend({
     },
 
     book: function(id, bookId) {
-        console.log('Book ' + bookId + ' from category ' + id);
+        // console.log('Book ' + bookId + ' from category ' + id);
+
+        app.data.book = new app.models.Book({ id: bookId });
+
+        if (app.data.currentView) {
+            app.data.currentView.remove();
+            app.data.currentView = null;
+        }
+
+        app.data.currentView = new app.views.Book({
+            model: app.data.book
+        });
+
+        $('[data-id=book]')
+            .empty()
+            .append(app.data.currentView.$el)
+            .addClass('is-visible')
+            .siblings()
+            .removeClass('is-visible');
+
+        app.data.book.fetch();
     },
 
     404: function() {
-        console.log('404');
+        // console.log('404');
     }
 });

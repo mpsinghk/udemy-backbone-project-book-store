@@ -204,6 +204,14 @@ aside {
     padding: 0 30px 10px 0;
 }
 
+.book-img img {
+    width: 200px;
+}
+
+.book-info {
+    flex: 1;
+}
+
 .book h2 {
     color: #212121;
     font-size: 30px;
