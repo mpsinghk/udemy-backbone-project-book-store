@@ -6,7 +6,9 @@ app.views.Books = Backbone.View.extend({
 
     render: function() {
         this.$el.html(
-            '<h1>' + this.collection.options.catId + '</h1><ul class="books-list"></ul>'
+            '<h1>' +
+                this.collection.options.catId.toUpperCase() +
+                '</h1><ul class="books-list"></ul>'
         );
         var $ul = $('ul.books-list', this.$el);
         var bookPath = '#category/' + this.collection.options.catId + '/book/';

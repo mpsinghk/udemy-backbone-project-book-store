@@ -36,7 +36,7 @@ h5,
 h6 {
     margin: 0.5em 0;
     padding: 0;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 a,
@@ -70,6 +70,13 @@ img {
     font-size: 1.5em;
     line-height: 1;
     margin: 0;
+}
+
+.logo a,
+.logo a:hover,
+.logo a:focus,
+.logo a:active {
+    color: #727272;
 }
 
 /* Top Navigation
@@ -142,6 +149,30 @@ aside {
 .sidebar a:focus,
 .sidebar a:active {
     background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Home & 404
+ * -------------------------------------------------- */
+.home,
+.four-o-four {
+    display: none;
+}
+
+.pills a {
+    display: inline-block;
+    color: #fff;
+    background-color: #039be5;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.pills a:hover,
+.pills a:focus,
+.pills a:active {
+    background-color: orange;
 }
 
 /* Books List

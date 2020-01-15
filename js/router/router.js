@@ -8,6 +8,16 @@ app.routers.Router = Backbone.Router.extend({
 
     home: function() {
         // console.log('Home');
+
+        if (app.data.currentView) {
+            app.data.currentView.remove();
+            app.data.currentView = null;
+        }
+
+        $('[data-id=home]')
+            .addClass('is-visible')
+            .siblings()
+            .removeClass('is-visible');
     },
 
     category: function(id) {
@@ -61,5 +71,15 @@ app.routers.Router = Backbone.Router.extend({
 
     404: function() {
         // console.log('404');
+
+        if (app.data.currentView) {
+            app.data.currentView.remove();
+            app.data.currentView = null;
+        }
+
+        $('[data-id=four-o-four]')
+            .addClass('is-visible')
+            .siblings()
+            .removeClass('is-visible');
     }
 });
