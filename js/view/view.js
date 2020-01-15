@@ -1,3 +1,4 @@
+// List view for category pages
 app.views.Books = Backbone.View.extend({
     initialize: function(options) {
         this.options = options;
@@ -37,6 +38,7 @@ app.views.Books = Backbone.View.extend({
     }
 });
 
+// Book detail view
 app.views.Book = Backbone.View.extend({
     initialize: function() {
         this.listenTo(this.model, 'change', this.render);

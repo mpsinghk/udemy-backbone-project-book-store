@@ -1,3 +1,4 @@
+// Bootstraping the App
 var app = {
     routers: {},
     views: {},
